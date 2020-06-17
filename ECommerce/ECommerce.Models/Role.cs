@@ -1,11 +1,12 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using System;
 using System.Collections.Generic;
+using System.Text;
 
 namespace ECommerce.Models
 {
-	public class User : IdentityUser<Guid>
+	public class Role : IdentityRole<Guid>
 	{
-		public List<Order> Orders { get; set; } = new List<Order>();
+		public string Description { get; set; }
 	}
 }
